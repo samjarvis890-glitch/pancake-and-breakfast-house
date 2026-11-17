@@ -1,0 +1,10 @@
+with open('assets/css/home-2.css', encoding='utf-8') as f:
+    text = f.read()
+
+import re
+matches = re.findall(r'(\.home2-hero-actions[^{]*\{[^}]*\})', text)
+for m in matches:
+    print(m)
+matches2 = re.findall(r'(\.home2-closing-cta[^{]*\{[^}]*\})', text)
+for m in matches2:
+    print(m)

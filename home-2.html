@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 | Pancake &amp; Breakfast House</title>
+  <meta name="description" content="Discover Pancake &amp; Breakfast House, a cosy place for delicious breakfast favourites, comforting drinks and happy morning moments.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Home 2 | Pancake &amp; Breakfast House">
+  <meta property="og:description" content="The Cosy Morning Experience. Wake up to something wonderful with fluffy pancakes and comforting breakfast moments.">
+  <meta property="og:image" content="assets/images/home-2/home2-hero.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/home-2.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Strictly identical across all 6 pages)
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="site-navbar">
+      <!-- Brand Logo Left -->
+      <a href="index.html" class="navbar-brand" aria-label="Pancake &amp; Breakfast House Home">
+        <img src="assets/images/brand/logo.svg" alt="Pancake &amp; Breakfast House" class="logo-light-mode" width="232" height="52">
+        <img src="assets/images/brand/logo-white.svg" alt="Pancake &amp; Breakfast House" class="logo-dark-mode" width="232" height="52">
+      </a>
+
+      <!-- Desktop Navigation Center (1281px+) -->
+      <nav class="navbar-nav-desktop" aria-label="Main Navigation">
+        <!-- 1. HOME ▼ (Only Dropdown) -->
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link dropdown-toggle" id="homeDropdown" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="dropdown-menu-custom" aria-labelledby="homeDropdown">
+            <a href="index.html" class="dropdown-item-custom">
+              <span class="dropdown-item-title">Home 1</span>
+              <span class="dropdown-item-sub">The Breakfast Table</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item-custom">
+              <span class="dropdown-item-title">Home 2</span>
+              <span class="dropdown-item-sub">Artisan Morning House</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. MENU -->
+        <a href="menu.html" class="nav-link">Menu</a>
+
+        <!-- 3. ABOUT -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 4. GROUP BOOKINGS -->
+        <a href="group-bookings.html" class="nav-link">Group Bookings</a>
+
+        <!-- 5. CONTACT -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Actions Right (1281px+) -->
+      <div class="navbar-actions-desktop">
+        <!-- Dark Mode Toggle Button -->
+        <button type="button" class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="theme-icon-use" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <!-- LTR / RTL Toggle Button -->
+        <button type="button" class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
+          <span class="dir-label-text" style="font-size: 0.8125rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <a href="group-bookings.html#booking" class="btn-pb btn-pb-primary">
+          <span>Book a Table</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile & Tablet Actions Right (<=1280px) -->
+      <div class="navbar-actions-mobile">
+        <!-- Dark Mode Mobile Button -->
+        <button type="button" class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="theme-icon-use" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <!-- RTL/LTR Mobile Button -->
+        <button type="button" class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
+          <span class="dir-label-text" style="font-size: 0.8125rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <!-- Hamburger Button -->
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile & Tablet Off-Canvas Drawer (Strict: contains ALL navigation items, controls & CTA) -->
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/images/brand/logo.svg" alt="Pancake &amp; Breakfast House" class="logo-light-mode" width="180" height="42">
+        <img src="assets/images/brand/logo-white.svg" alt="Pancake &amp; Breakfast House" class="logo-dark-mode" width="180" height="42">
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- 1. HOME ▼ (Only Dropdown) -->
+        <li class="mobile-nav-item mobile-dropdown-item">
+          <button type="button" class="mobile-nav-link mobile-dropdown-btn" id="mobileHomeDropdownBtn" aria-expanded="false" aria-controls="mobileHomeSubmenu">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="mobile-submenu" id="mobileHomeSubmenu">
+            <a href="index.html" class="mobile-sublink">
+              <span>Home 1</span>
+              <small>The Breakfast Table</small>
+            </a>
+            <a href="home-2.html" class="mobile-sublink">
+              <span>Home 2</span>
+              <small>Artisan Morning House</small>
+            </a>
+          </div>
+        </li>
+
+        <!-- 2. MENU -->
+        <li class="mobile-nav-item">
+          <a href="menu.html" class="mobile-nav-link">
+            <span>Menu</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+
+        <!-- 3. ABOUT -->
+        <li class="mobile-nav-item">
+          <a href="about.html" class="mobile-nav-link">
+            <span>About</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+
+        <!-- 4. GROUP BOOKINGS -->
+        <li class="mobile-nav-item">
+          <a href="group-bookings.html" class="mobile-nav-link">
+            <span>Group Bookings</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+
+        <!-- 5. CONTACT -->
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link">
+            <span>Contact</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-divider"></div>
+
+      <!-- 6. Dark Mode & 7. LTR/RTL inside drawer -->
+      <div class="mobile-drawer-toggles">
+        <button type="button" class="drawer-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode">
+          <svg class="theme-icon-use" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+
+        <button type="button" class="drawer-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">
+          <span class="dir-label-text">RTL</span>
+          <span>Direction</span>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-divider"></div>
+
+      <!-- 8. BOOK A TABLE -->
+      <div class="mobile-drawer-cta">
+        <a href="group-bookings.html#booking" class="btn-pb btn-pb-primary">
+          <span>Book a Table</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 6 UNIQUE SECTIONS FOR HOME 2
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — EDITORIAL MORNING HERO
+         ========================================================================== -->
+    <section class="home2-section home2-hero" id="hero2">
+      <div class="home2-container">
+        <div class="home2-hero-grid">
+          <!-- Left: Editorial Typography -->
+          <div class="home2-hero-content">
+            <div class="home2-eyebrow">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+              </svg>
+              <span>A Fresh Start Begins Here</span>
+            </div>
+
+            <h1 class="home2-hero-title">Wake Up to Something Wonderful.</h1>
+
+            <p class="home2-hero-desc">
+              Slow down, settle in and enjoy the simple happiness of a beautiful breakfast. From comforting favourites to lovely little moments, there's always something to make your morning brighter.
+            </p>
+
+            <div class="home2-hero-cta">
+              <a href="menu.html" class="btn-pb btn-pb-primary">
+                <span>Discover Our Menu</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+              <a href="about.html#our-restaurant" class="btn-pb btn-pb-secondary">
+                <span>Our Restaurant</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Wide Cinematic Photograph -->
+          <div class="home2-hero-image-wrap">
+            <img src="assets/images/home-2/home2-hero.webp" alt="Peaceful sunlit morning café scene with coffee by the window" class="home2-hero-img" width="640" height="540" loading="eager">
+            <div class="home2-hero-badge">
+              <div class="home2-hero-badge-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="home2-hero-badge-title">Morning Light • 7:00 AM</div>
+                <div class="home2-hero-badge-sub">The Cosy Morning Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — THE ART OF A SLOW MORNING
+         ========================================================================== -->
+    <section class="home2-section home2-slow-section" id="slow-morning">
+      <div class="home2-container">
+        <div class="home2-header">
+          <span class="home2-eyebrow">The Art of a Slow Morning</span>
+          <h2 class="home2-title">Take a Moment. Make It a Morning.</h2>
+          <p class="home2-desc">Some of life's loveliest moments happen when we give ourselves time to enjoy them.</p>
+        </div>
+
+        <div class="home2-slow-grid">
+          <!-- Left: Editorial Photo of quiet window seating -->
+          <div class="home2-slow-visual">
+            <img src="assets/images/home-2/slow-morning.webp" alt="Quiet restaurant window seating area with warm morning sunlight" class="home2-slow-img" width="560" height="560" loading="lazy">
+          </div>
+
+          <!-- Right: Three Storytelling Highlights -->
+          <div class="home2-slow-content">
+            <div class="home2-highlight-list">
+              <!-- Highlight 1 -->
+              <div class="home2-highlight-item">
+                <div class="home2-highlight-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3>A Warm Welcome</h3>
+                  <p>Walk in, settle down and feel at home from the very first moment.</p>
+                </div>
+              </div>
+
+              <!-- Highlight 2 -->
+              <div class="home2-highlight-item">
+                <div class="home2-highlight-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Freshly Enjoyed</h3>
+                  <p>Take your time over breakfast favourites and comforting drinks.</p>
+                </div>
+              </div>
+
+              <!-- Highlight 3 -->
+              <div class="home2-highlight-item">
+                <div class="home2-highlight-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Moments That Matter</h3>
+                  <p>Make space for conversations, smiles and little everyday celebrations.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Small Decorative Quote -->
+            <div class="home2-quote-box">
+              <p class="home2-quote-text">&ldquo;Good mornings are made of simple things.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — A TASTE FOR EVERY MORNING (3-Column Category Showcase)
+         ========================================================================== -->
+    <section class="home2-section home2-taste-section" id="taste-showcase">
+      <div class="home2-container">
+        <div class="home2-header">
+          <span class="home2-eyebrow">A Taste for Every Morning</span>
+          <h2 class="home2-title">What Does Your Morning Feel Like?</h2>
+          <p class="home2-desc">Whether you're in the mood for something sweet, something savoury or something comforting to sip, discover a breakfast worth looking forward to.</p>
+        </div>
+
+        <div class="home2-taste-grid">
+          <!-- Category 1: Sweet Beginnings -->
+          <article class="home2-taste-card">
+            <div class="home2-taste-image-wrap">
+              <img src="assets/images/home-2/sweet-beginnings.webp" alt="Sweet breakfast favourites with pancakes and waffles" class="home2-taste-img" width="400" height="270" loading="lazy">
+            </div>
+            <div class="home2-taste-body">
+              <h3 class="home2-taste-card-title">Sweet Beginnings</h3>
+              <p class="home2-taste-card-desc">Explore pancakes, waffles and lovely sweet breakfast favourites.</p>
+              <a href="menu.html#pancakes" class="btn-pb btn-pb-secondary home2-taste-btn">
+                <span>Explore Sweet Favourites</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 2: Savoury Comfort -->
+          <article class="home2-taste-card">
+            <div class="home2-taste-image-wrap">
+              <img src="assets/images/home-2/savoury-comfort.webp" alt="Savoury breakfast choices with eggs and sourdough toast" class="home2-taste-img" width="400" height="270" loading="lazy">
+            </div>
+            <div class="home2-taste-body">
+              <h3 class="home2-taste-card-title">Savoury Comfort</h3>
+              <p class="home2-taste-card-desc">Discover eggs, toast and satisfying breakfast choices.</p>
+              <a href="menu.html#breakfast-plates" class="btn-pb btn-pb-secondary home2-taste-btn">
+                <span>Explore Savoury Choices</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 3: A Little Sip of Joy -->
+          <article class="home2-taste-card">
+            <div class="home2-taste-image-wrap">
+              <img src="assets/images/home-2/morning-drinks.webp" alt="Handcrafted coffees and refreshing morning drinks" class="home2-taste-img" width="400" height="270" loading="lazy">
+            </div>
+            <div class="home2-taste-body">
+              <h3 class="home2-taste-card-title">A Little Sip of Joy</h3>
+              <p class="home2-taste-card-desc">Find coffee, tea and refreshing drinks for your morning.</p>
+              <a href="menu.html#coffee-drinks" class="btn-pb btn-pb-secondary home2-taste-btn">
+                <span>Explore Morning Drinks</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — INSIDE OUR LITTLE BREAKFAST WORLD
+         ========================================================================== -->
+    <section class="home2-section home2-inside-section" id="inside-our-world">
+      <div class="home2-container">
+        <div class="home2-header">
+          <span class="home2-eyebrow">Inside Our Little Breakfast World</span>
+          <h2 class="home2-title">More Than Breakfast. A Place to Feel Good.</h2>
+          <p class="home2-desc">A cosy space, welcoming details and the kind of atmosphere that makes you want to stay a little longer.</p>
+        </div>
+
+        <div class="home2-inside-grid">
+          <!-- Asymmetric Visual Arrangement -->
+          <div class="home2-inside-mosaic">
+            <!-- Large Panoramic Interior -->
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden;">
+              <img src="assets/images/home-2/inside-dining.webp" alt="Warm and beautifully designed breakfast restaurant dining space" class="home2-inside-panoramic" width="720" height="320" loading="lazy">
+              <div class="home2-inside-caption">The Dining Space</div>
+            </div>
+
+            <!-- Two Smaller Supporting Photos -->
+            <div class="home2-inside-duo">
+              <!-- Coffee Corner -->
+              <div class="home2-inside-thumb-card">
+                <img src="assets/images/home-2/inside-coffee.webp" alt="Cosy coffee preparation corner with ceramic cups" class="home2-inside-thumb-img" width="340" height="200" loading="lazy">
+                <div class="home2-inside-caption">The Coffee Corner</div>
+              </div>
+
+              <!-- Little Details -->
+              <div class="home2-inside-thumb-card">
+                <img src="assets/images/home-2/inside-details.webp" alt="Delicate restaurant table details with natural flowers and tableware" class="home2-inside-thumb-img" width="340" height="200" loading="lazy">
+                <div class="home2-inside-caption">The Little Details</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Text Block -->
+          <div class="home2-inside-story">
+            <span class="home2-eyebrow" style="margin-bottom: 0.85rem;">Our Atmosphere</span>
+            <h3>Come As You Are. Enjoy Every Moment.</h3>
+            <p>
+              From a peaceful coffee break to a cheerful breakfast with your favourite people, we want every visit to feel comfortable, welcoming and memorable.
+            </p>
+            <a href="about.html#our-story" class="btn-pb btn-pb-primary">
+              <span>Discover Our Story</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5 — LITTLE MOMENTS, BIG HAPPINESS (4-Item Editorial Grid)
+         ========================================================================== -->
+    <section class="home2-section home2-moments-section" id="happy-moments">
+      <div class="home2-container">
+        <div class="home2-header">
+          <span class="home2-eyebrow">Little Moments, Big Happiness</span>
+          <h2 class="home2-title">Make Room for More Happy Moments.</h2>
+          <p class="home2-desc">Every visit has its own little story. What will yours look like?</p>
+        </div>
+
+        <div class="home2-moments-grid">
+          <!-- Moment 1: Quiet Coffee Moment -->
+          <div class="home2-moment-card">
+            <img src="assets/images/home-2/moment-coffee.webp" alt="A peaceful single-person coffee moment beside a restaurant window" class="home2-moment-img" width="300" height="380" loading="lazy">
+            <div class="home2-moment-overlay">
+              <h3 class="home2-moment-caption">A Moment to Yourself</h3>
+            </div>
+          </div>
+
+          <!-- Moment 2: Sweet Little Treat -->
+          <div class="home2-moment-card">
+            <img src="assets/images/home-2/moment-treat.webp" alt="A beautifully presented sweet breakfast treat" class="home2-moment-img" width="300" height="380" loading="lazy">
+            <div class="home2-moment-overlay">
+              <h3 class="home2-moment-caption">Something Sweet to Enjoy</h3>
+            </div>
+          </div>
+
+          <!-- Moment 3: Friendly Welcome -->
+          <div class="home2-moment-card">
+            <img src="assets/images/home-2/moment-welcome.webp" alt="A friendly restaurant staff welcome with genuine hospitality" class="home2-moment-img" width="300" height="380" loading="lazy">
+            <div class="home2-moment-overlay">
+              <h3 class="home2-moment-caption">Always a Warm Welcome</h3>
+            </div>
+          </div>
+
+          <!-- Moment 4: Beautiful Table Setting -->
+          <div class="home2-moment-card">
+            <img src="assets/images/home-2/moment-table.webp" alt="An elegant breakfast table setting with fresh flowers and natural morning light" class="home2-moment-img" width="300" height="380" loading="lazy">
+            <div class="home2-moment-overlay">
+              <h3 class="home2-moment-caption">The Little Things Matter</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6 — GRAND WELCOME CTA (Cinematic Closing Banner)
+         ========================================================================== -->
+    <section class="home2-closing-section" id="welcome-cta">
+      <!-- Background Image Overlay -->
+      <div class="home2-closing-bg-wrap">
+        <img src="assets/images/home-2/home2-closing.webp" alt="Welcoming breakfast restaurant exterior in early morning sunlight" class="home2-closing-bg-img" width="1440" height="600" loading="lazy">
+      </div>
+
+      <div class="home2-container">
+        <div class="home2-closing-card">
+          <div class="home2-eyebrow">
+            <span>Your Next Morning Starts Here</span>
+          </div>
+
+          <h2 class="home2-title">Come for Breakfast. Leave with a Smile.</h2>
+
+          <p class="home2-desc">
+            Find your favourite breakfast, bring your favourite people and enjoy a little more happiness in every morning.
+          </p>
+
+          <div class="home2-closing-cta">
+            <a href="menu.html" class="btn-pb btn-pb-primary">
+              <span>Explore Our Menu</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="group-bookings.html" class="btn-pb btn-pb-secondary">
+              <span>Plan a Group Visit</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Strictly identical across all 6 pages)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" aria-label="Pancake &amp; Breakfast House Home">
+          <img src="assets/images/brand/logo-white.svg" alt="Pancake &amp; Breakfast House" width="220" height="49">
+        </a>
+        <div class="footer-brand-tagline">Good Morning. Good Food. Good Moments.</div>
+        <p class="footer-brand-desc">
+          A welcoming place for fluffy pancakes, comforting breakfast favourites and lovely mornings together.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="footer-social-links" aria-label="Social Media Links">
+          <a href="#" class="social-icon-btn" aria-label="Instagram">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="Facebook">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="TikTok">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-links-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="group-bookings.html">Group Bookings</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Our Menu -->
+      <div class="footer-links-col">
+        <h3>Our Menu</h3>
+        <ul class="footer-links-list">
+          <li><a href="menu.html#pancakes">Pancakes</a></li>
+          <li><a href="menu.html#waffles">Waffles</a></li>
+          <li><a href="menu.html#breakfast-plates">Breakfast Plates</a></li>
+          <li><a href="menu.html#eggs-toast">Eggs &amp; Toast</a></li>
+          <li><a href="menu.html#coffee-drinks">Coffee &amp; Drinks</a></li>
+          <li><a href="menu.html#sweet-treats">Sweet Treats</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Plan Your Visit -->
+      <div class="footer-links-col">
+        <h3>Plan Your Visit</h3>
+        <ul class="footer-links-list">
+          <li><a href="group-bookings.html#booking">Book a Table</a></li>
+          <li><a href="group-bookings.html">Group Gatherings</a></li>
+          <li><a href="about.html#our-story">Our Story</a></li>
+          <li><a href="about.html#our-restaurant">Our Restaurant</a></li>
+          <li><a href="about.html#food-philosophy">Food Philosophy</a></li>
+          <li><a href="about.html#gallery">Photo Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Get in Touch & Newsletter -->
+      <div class="footer-contact-col">
+        <h3>Get in Touch</h3>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <span>124 Morning Light Way, Maplewood Quarter</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          <span>(555) 234-7890</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span>hello@pancakehouse-example.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>Mon – Sun: 7:00 AM – 3:00 PM</span>
+        </div>
+
+        <!-- Newsletter Subscription Form -->
+        <div style="margin-top: 1.5rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #FFF4E6;">Morning Newsletter</h4>
+          <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" aria-label="Email address for newsletter" required>
+              <button type="submit">Subscribe</button>
+            </div>
+            <p class="newsletter-privacy">We respect your privacy. No spam, ever.</p>
+            <div class="newsletter-message" id="newsletterMsg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 Pancake &amp; Breakfast House. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms &amp; Conditions</a>
+        <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Local Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/home-2.js"></script>
+</body>
+</html>

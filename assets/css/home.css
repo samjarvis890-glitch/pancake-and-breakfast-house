@@ -1,0 +1,985 @@
+/* ==========================================================================
+   PANCAKE & BREAKFAST HOUSE — HOMEPAGE SPECIFIC STYLES (home.css)
+   10 Dedicated Sections
+   ========================================================================== */
+
+/* Section Spacing Standard */
+.pb-section {
+  padding: 5.5rem 1.5rem;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .pb-section {
+    padding: 4.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pb-section {
+    padding: 3.5rem 1rem;
+  }
+}
+
+.container-narrow {
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.container-wide {
+  max-width: 1380px;
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   SECTION 01: HERO — THE BREAKFAST TABLE
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(180deg, rgba(255, 249, 239, 0.95) 0%, rgba(244, 215, 198, 0.4) 100%);
+  padding: 4.5rem 1.5rem 5.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .hero-section {
+  background: linear-gradient(180deg, #211A17 0%, #2A1F1A 100%);
+}
+
+.hero-content-wrapper {
+  max-width: 920px;
+  margin-inline: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: var(--color-bg-card);
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+.hero-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5.2vw, 4.25rem);
+  color: var(--color-text-main);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.hero-desc {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin-inline: auto;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-label-badge {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Hero Centerpiece Visual */
+.hero-visual-container {
+  max-width: 1140px;
+  margin-inline: auto;
+  margin-top: 3rem;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 3px solid var(--color-bg-card);
+}
+
+.hero-visual-img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-floating-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--color-text-main);
+  z-index: 3;
+}
+[dir="rtl"] .hero-floating-badge {
+  right: auto;
+  left: 24px;
+}
+html[data-theme="dark"] .hero-floating-badge {
+  background-color: rgba(53, 40, 32, 0.92);
+}
+
+.hero-floating-badge svg {
+  color: var(--color-primary);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.hero-floating-badge-text strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero-floating-badge-text span {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 767px) {
+  .hero-floating-badge {
+    position: static;
+    margin: 1rem auto 0 auto;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   SECTION 02: OUR HOMESTYLE PROMISE
+   ========================================================================== */
+.promise-section {
+  background-color: var(--color-bg-main);
+}
+
+.promise-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.promise-card-featured {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.promise-card-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.promise-card-featured .promise-card-img-wrap {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+.promise-card-featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+.promise-card-featured:hover img {
+  transform: scale(1.03);
+}
+
+.promise-card-body {
+  padding: 2.25rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.promise-number {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.promise-card-title {
+  font-size: 1.625rem;
+  margin-bottom: 0.85rem;
+}
+
+.promise-card-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.promise-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.promise-card-sub {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.promise-card-sub:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.promise-card-sub .promise-card-img-wrap {
+  height: 100%;
+  min-height: 180px;
+  overflow: hidden;
+}
+.promise-card-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+.promise-card-sub:hover img {
+  transform: scale(1.04);
+}
+
+.promise-card-sub .promise-card-body {
+  padding: 1.5rem 1.75rem;
+}
+
+.promise-card-sub .promise-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .promise-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+  .promise-card-featured .promise-card-img-wrap {
+    height: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .promise-card-sub {
+    grid-template-columns: 1fr;
+  }
+  .promise-card-sub .promise-card-img-wrap {
+    height: 200px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 03: OUR SIGNATURE PANCAKES
+   ========================================================================== */
+.pancakes-section {
+  background-color: rgba(244, 215, 198, 0.28);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+html[data-theme="dark"] .pancakes-section {
+  background-color: #271E1A;
+}
+
+.pancake-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.pancake-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.pancake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pancake-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-highlight-subtle);
+  position: relative;
+}
+.pancake-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+.pancake-card:hover img {
+  transform: scale(1.05);
+}
+
+.pancake-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--color-primary);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+[dir="rtl"] .pancake-badge {
+  left: auto;
+  right: 12px;
+}
+html[data-theme="dark"] .pancake-badge {
+  background-color: rgba(53, 40, 32, 0.92);
+  color: var(--color-highlight);
+}
+
+.pancake-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pancake-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.pancake-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.pancake-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pancake-view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+.pancake-view-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+.pancake-card:hover .pancake-view-link svg {
+  transform: translateX(3px);
+}
+[dir="rtl"] .pancake-card:hover .pancake-view-link svg {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 1199px) {
+  .pancake-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .pancake-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 04: BEYOND THE PANCAKE STACK
+   ========================================================================== */
+.categories-section {
+  background-color: var(--color-bg-main);
+}
+
+.category-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.category-card {
+  position: relative;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.category-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background-color: var(--color-highlight-subtle);
+}
+.category-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.category-card-link {
+  margin-top: auto;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.category-card-link svg {
+  width: 15px;
+  height: 15px;
+  transition: transform var(--transition-fast);
+}
+.category-card:hover .category-card-link svg {
+  transform: translateX(4px);
+}
+[dir="rtl"] .category-card:hover .category-card-link svg {
+  transform: translateX(-4px);
+}
+
+@media (max-width: 1199px) {
+  .category-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .category-horizontal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 05: RESTAURANT ATMOSPHERE
+   ========================================================================== */
+.atmosphere-section {
+  background: linear-gradient(180deg, var(--color-bg-main) 0%, rgba(244, 215, 198, 0.4) 100%);
+}
+html[data-theme="dark"] .atmosphere-section {
+  background: linear-gradient(180deg, #211A17 0%, #291E19 100%);
+}
+
+.atmosphere-hero-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--color-bg-card);
+}
+
+.atmosphere-hero-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.atmosphere-overlay-card {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 480px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+[dir="rtl"] .atmosphere-overlay-card {
+  left: auto;
+  right: 2rem;
+}
+html[data-theme="dark"] .atmosphere-overlay-card {
+  background-color: rgba(53, 40, 32, 0.95);
+}
+
+.atmosphere-overlay-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.atmosphere-overlay-card p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+@media (max-width: 834px) {
+  .atmosphere-overlay-card {
+    position: static;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    padding: 1.75rem;
+  }
+}
+
+/* ==========================================================================
+   SECTION 06: THE BREAKFAST MOMENT GALLERY
+   ========================================================================== */
+.gallery-section {
+  background-color: var(--color-bg-main);
+}
+
+.gallery-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: auto auto;
+  gap: 1.75rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-item-img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-caption {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-bg-card);
+}
+.gallery-caption h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+.gallery-caption p {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 834px) {
+  .gallery-asymmetric-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 07: GROUP BREAKFAST INVITATION
+   ========================================================================== */
+.group-section {
+  background-color: rgba(244, 215, 198, 0.32);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+html[data-theme="dark"] .group-section {
+  background-color: #271E1A;
+}
+
+.group-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.group-img-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--color-bg-card);
+}
+.group-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.group-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  background-color: var(--color-bg-card);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+.group-highlight-item:hover {
+  transform: translateX(4px);
+}
+[dir="rtl"] .group-highlight-item:hover {
+  transform: translateX(-4px);
+}
+
+.group-highlight-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-highlight-subtle);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+html[data-theme="dark"] .group-highlight-icon {
+  background-color: rgba(227, 160, 109, 0.15);
+}
+.group-highlight-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.group-highlight-text h4 {
+  font-size: 1.0625rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.group-highlight-text p {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .group-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   SECTION 08: THE BREAKFAST CHOICE
+   ========================================================================== */
+.choice-section {
+  background-color: var(--color-bg-main);
+}
+
+.choice-pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.choice-pathway-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.choice-pathway-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.choice-pathway-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-highlight-subtle);
+}
+.choice-pathway-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+.choice-pathway-card:hover img {
+  transform: scale(1.05);
+}
+
+.choice-pathway-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.choice-pathway-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.65rem;
+  color: var(--color-text-main);
+}
+
+.choice-pathway-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+  color: var(--color-text-muted);
+}
+
+.choice-pathway-arrow {
+  margin-top: auto;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.choice-pathway-arrow svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+.choice-pathway-card:hover .choice-pathway-arrow svg {
+  transform: translateX(5px);
+}
+[dir="rtl"] .choice-pathway-card:hover .choice-pathway-arrow svg {
+  transform: translateX(-5px);
+}
+
+@media (max-width: 991px) {
+  .choice-pathways-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   SECTION 09: VISIT INFORMATION PANELS
+   ========================================================================== */
+.info-section {
+  background-color: var(--color-bg-peach);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.info-panels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.info-panel-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.info-panel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.info-panel-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-highlight-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.35rem;
+}
+html[data-theme="dark"] .info-panel-icon {
+  background-color: rgba(227, 160, 109, 0.15);
+}
+.info-panel-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.info-panel-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-main);
+}
+
+.info-panel-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  color: var(--color-text-muted);
+}
+
+.info-panel-card .btn-pb {
+  margin-top: auto;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .info-panels-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   SECTION 10: CLOSING CTA — YOUR NEXT HAPPY MORNING
+   ========================================================================== */
+.closing-section {
+  background: linear-gradient(180deg, var(--color-bg-main) 0%, rgba(244, 215, 198, 0.5) 100%);
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+html[data-theme="dark"] .closing-section {
+  background: linear-gradient(180deg, #211A17 0%, #2A1F1A 100%);
+}
+
+.closing-content-wrapper {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.closing-visual-frame {
+  max-width: 980px;
+  margin: 3rem auto 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--color-bg-card);
+}
+
+.closing-visual-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakfast Menu | Pancake &amp; Breakfast House</title>
+  <meta name="description" content="Explore the Pancake &amp; Breakfast House menu, featuring pancake favourites, waffles, breakfast plates, eggs and toast, coffee, drinks and sweet treats.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Breakfast Menu | Pancake &amp; Breakfast House">
+  <meta property="og:description" content="Explore the Pancake &amp; Breakfast House menu, featuring pancake favourites, waffles, breakfast plates, eggs and toast, coffee, drinks and sweet treats.">
+  <meta property="og:image" content="assets/images/menu/menu-hero.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Strictly identical across all 6 pages)
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="site-navbar">
+      <!-- Brand Logo Left -->
+      <a href="index.html" class="navbar-brand" aria-label="Pancake &amp; Breakfast House Home">
+        <img src="assets/images/brand/logo.svg" alt="Pancake &amp; Breakfast House" class="logo-light-mode" width="232" height="52">
+        <img src="assets/images/brand/logo-white.svg" alt="Pancake &amp; Breakfast House" class="logo-dark-mode" width="232" height="52">
+      </a>
+
+      <!-- Desktop Navigation Center (1281px+) -->
+      <nav class="navbar-nav-desktop" aria-label="Main Navigation">
+        <!-- 1. HOME ▼ (Only Dropdown) -->
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link dropdown-toggle" id="homeDropdown" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="dropdown-menu-custom" aria-labelledby="homeDropdown">
+            <a href="index.html" class="dropdown-item-custom">
+              <span class="dropdown-item-title">Home 1</span>
+              <span class="dropdown-item-sub">The Breakfast Table</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item-custom">
+              <span class="dropdown-item-title">Home 2</span>
+              <span class="dropdown-item-sub">Artisan Morning House</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. MENU -->
+        <a href="menu.html" class="nav-link">Menu</a>
+
+        <!-- 3. ABOUT -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 4. GROUP BOOKINGS -->
+        <a href="group-bookings.html" class="nav-link">Group Bookings</a>
+
+        <!-- 5. CONTACT -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Actions Right (1281px+) -->
+      <div class="navbar-actions-desktop">
+        <!-- Dark Mode Toggle Button -->
+        <button type="button" class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="theme-icon-use" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <!-- LTR / RTL Toggle Button -->
+        <button type="button" class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
+          <span class="dir-label-text" style="font-size: 0.8125rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <a href="group-bookings.html#booking" class="btn-pb btn-pb-primary">
+          <span>Book a Table</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile & Tablet Actions Right (<=1280px) -->
+      <div class="navbar-actions-mobile">
+        <!-- Dark Mode Mobile Button -->
+        <button type="button" class="icon-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="theme-icon-use" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <!-- RTL/LTR Mobile Button -->
+        <button type="button" class="icon-toggle-btn dir-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL/LTR">
+          <span class="dir-label-text" style="font-size: 0.8125rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <!-- Hamburger Button -->
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile & Tablet Off-Canvas Drawer (Strict: contains ALL navigation items, controls & CTA) -->
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/images/brand/logo.svg" alt="Pancake &amp; Breakfast House" class="logo-light-mode" width="180" height="42">
+        <img src="assets/images/brand/logo-white.svg" alt="Pancake &amp; Breakfast House" class="logo-dark-mode" width="180" height="42">
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <!-- 1. HOME ▼ (Only Dropdown) -->
+        <li class="mobile-nav-item mobile-dropdown-item">
+          <button type="button" class="mobile-nav-link mobile-dropdown-btn" id="mobileHomeDropdownBtn" aria-expanded="false" aria-controls="mobileHomeSubmenu">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="mobile-submenu" id="mobileHomeSubmenu">
+            <a href="index.html" class="mobile-sublink">
+              <span>Home 1</span>
+              <small>The Breakfast Table</small>
+            </a>
+            <a href="home-2.html" class="mobile-sublink">
+              <span>Home 2</span>
+              <small>Artisan Morning House</small>
+            </a>
+          </div>
+        </li>
+
+        <!-- 2. MENU -->
+        <li class="mobile-nav-item">
+          <a href="menu.html" class="mobile-nav-link">
+            <span>Menu</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+
+        <!-- 3. ABOUT -->
+        <li class="mobile-nav-item">
+          <a href="about.html" class="mobile-nav-link">
+            <span>About</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+
+        <!-- 4. GROUP BOOKINGS -->
+        <li class="mobile-nav-item">
+          <a href="group-bookings.html" class="mobile-nav-link">
+            <span>Group Bookings</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+
+        <!-- 5. CONTACT -->
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link">
+            <span>Contact</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-divider"></div>
+
+      <!-- 6. Dark Mode & 7. LTR/RTL inside drawer -->
+      <div class="mobile-drawer-toggles">
+        <button type="button" class="drawer-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode">
+          <svg class="theme-icon-use" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+
+        <button type="button" class="drawer-toggle-btn dir-toggle-btn" aria-label="Toggle text direction">
+          <span class="dir-label-text">RTL</span>
+          <span>Direction</span>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-divider"></div>
+
+      <!-- 8. BOOK A TABLE -->
+      <div class="mobile-drawer-cta">
+        <a href="group-bookings.html#booking" class="btn-pb btn-pb-primary">
+          <span>Book a Table</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 6 UNIQUE SECTIONS FOR MENU PAGE
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1 — UNIQUE MENU HERO
+         ========================================================================== -->
+    <section class="menu-section menu-hero" id="menu-hero">
+      <div class="menu-container">
+        <div class="menu-hero-grid">
+          <!-- Left: Editorial Typography -->
+          <div class="menu-hero-content">
+            <div class="menu-eyebrow">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+              </svg>
+              <span>Made for Your Morning</span>
+            </div>
+
+            <h1 class="menu-hero-title">Find Your New Breakfast Favourite.</h1>
+
+            <p class="menu-hero-desc">
+              From comforting classics to sweet little treats, explore a menu filled with lovely choices for the most important moments of your morning.
+            </p>
+
+            <div class="menu-hero-cta">
+              <a href="#menu-collection" class="btn-pb btn-pb-primary">
+                <span>Explore the Menu</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </a>
+              <a href="group-bookings.html" class="btn-pb btn-pb-secondary">
+                <span>Plan Your Visit</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Unique Chef Plating Photograph -->
+          <div class="menu-hero-image-wrap">
+            <img src="assets/images/menu/menu-hero.webp" alt="Chef carefully finishing a beautifully presented breakfast dish in restaurant kitchen" class="menu-hero-img" width="700" height="520" loading="eager">
+            <div class="menu-hero-floating-badge">
+              <div class="menu-hero-badge-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="menu-hero-badge-title">Morning Service • 7:00 AM</div>
+                <div class="menu-hero-badge-sub">Crafted with Fresh Batter &amp; Care</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — EXPLORE OUR MENU CATEGORIES & FILTER HUB
+         Anchor: id="menu-collection"
+         ========================================================================== -->
+    <section class="menu-section menu-filter-section" id="menu-collection">
+      <div class="menu-container">
+        <div class="menu-header">
+          <span class="menu-eyebrow">Curated Selection</span>
+          <h2 class="menu-title">What Are You in the Mood For?</h2>
+          <p class="menu-desc">Take a look around and discover something delicious for your kind of morning.</p>
+        </div>
+
+        <!-- Category Filter Buttons (8 Categories) -->
+        <div class="menu-filter-bar" role="toolbar" aria-label="Menu categories filter">
+          <button type="button" class="menu-filter-btn active" data-filter="all" aria-pressed="true">All Menu</button>
+          <button type="button" class="menu-filter-btn" data-filter="pancakes" aria-pressed="false">Pancakes</button>
+          <button type="button" class="menu-filter-btn" data-filter="waffles" aria-pressed="false">Waffles</button>
+          <button type="button" class="menu-filter-btn" data-filter="breakfast-plates" aria-pressed="false">Breakfast Plates</button>
+          <button type="button" class="menu-filter-btn" data-filter="eggs-toast" aria-pressed="false">Eggs &amp; Toast</button>
+          <button type="button" class="menu-filter-btn" data-filter="bowls-light-bites" aria-pressed="false">Bowls &amp; Light Bites</button>
+          <button type="button" class="menu-filter-btn" data-filter="coffee-drinks" aria-pressed="false">Coffee &amp; Drinks</button>
+          <button type="button" class="menu-filter-btn" data-filter="sweet-treats" aria-pressed="false">Sweet Treats</button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="menu-search-wrapper">
+          <div class="menu-search-box">
+            <svg class="menu-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input type="search" id="menuSearchInput" class="menu-search-input" placeholder="Search your breakfast favourites..." aria-label="Search breakfast menu">
+            <button type="button" class="menu-search-clear-btn" id="menuSearchClear" aria-label="Clear search">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Empty State Container -->
+        <div class="menu-empty-state" id="menuEmptyState" role="status">
+          <svg class="menu-empty-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h3 class="menu-empty-title">No Favourites Found</h3>
+          <p class="menu-empty-desc">We couldn't find any dishes matching your search. Try another keyword or browse our full collection.</p>
+          <button type="button" class="btn-pb btn-pb-secondary" id="menuEmptyResetBtn">Reset Filters</button>
+        </div>
+
+        <!-- Interactive Filtered Cards Grid -->
+        <div class="menu-interactive-grid" id="menuInteractiveGrid">
+          <!-- Card: Classic Maple Stack -->
+          <article class="menu-item-card menu-filter-target" data-category="pancakes">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/classic-maple.webp" alt="Classic Maple Stack pancakes" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Pancakes</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Classic Maple Stack</h3>
+              </div>
+              <p class="menu-item-desc">Fluffy pancakes served with a classic maple-inspired finish.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#pancakes" class="menu-explore-link" aria-label="View pancakes details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Berry Bliss -->
+          <article class="menu-item-card menu-filter-target" data-category="pancakes">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/berry-bliss.webp" alt="Berry Bliss sweet pancake dish" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Pancakes</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Berry Bliss</h3>
+              </div>
+              <p class="menu-item-desc">A colourful sweet favourite with berries and a lovely fresh finish.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#pancakes" class="menu-explore-link" aria-label="View pancakes details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Golden Waffles -->
+          <article class="menu-item-card menu-filter-target" data-category="waffles">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/golden-waffles.webp" alt="Golden Waffles with fresh berries and maple syrup" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Waffles</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Golden Waffles</h3>
+              </div>
+              <p class="menu-item-desc">Discover golden waffle favourites and sweet breakfast combinations.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#waffles" class="menu-explore-link" aria-label="View waffles details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Hearty Breakfast Plates -->
+          <article class="menu-item-card menu-filter-target" data-category="breakfast-plates">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/hearty-plates.webp" alt="Hearty breakfast plate with eggs, toast and accompaniments" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Breakfast Plates</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Hearty Breakfast Plates</h3>
+              </div>
+              <p class="menu-item-desc">Enjoy satisfying breakfast-inspired plates for a slower morning.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#breakfast-plates" class="menu-explore-link" aria-label="View breakfast plates details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Eggs & Toast -->
+          <article class="menu-item-card menu-filter-target" data-category="eggs-toast">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/eggs-toast.webp" alt="Fresh eggs and sourdough toast" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Eggs &amp; Toast</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Eggs &amp; Toast</h3>
+              </div>
+              <p class="menu-item-desc">Explore familiar breakfast combinations with eggs and toast.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#eggs-toast" class="menu-explore-link" aria-label="View eggs and toast details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Bowls & Light Bites -->
+          <article class="menu-item-card menu-filter-target" data-category="bowls-light-bites">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/light-bowls.webp" alt="Light breakfast bowl with yogurt, granola and fresh fruit" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Bowls &amp; Light Bites</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Bowls &amp; Light Bites</h3>
+              </div>
+              <p class="menu-item-desc">Find lighter breakfast-inspired choices for a refreshing start.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#bowls-light-bites" class="menu-explore-link" aria-label="View bowls details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Coffee & Drinks -->
+          <article class="menu-item-card menu-filter-target" data-category="coffee-drinks">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/coffee-drinks.webp" alt="Barista crafted morning coffee and drinks" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Coffee &amp; Drinks</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Artisan Coffee &amp; Drinks</h3>
+              </div>
+              <p class="menu-item-desc">Discover freshly prepared coffee, teas and morning fruit drinks.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#coffee-drinks" class="menu-explore-link" aria-label="View coffee drinks details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Sweet Treats -->
+          <article class="menu-item-card menu-filter-target" data-category="sweet-treats">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/sweet-treats.webp" alt="French toast and sweet breakfast treats" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Sweet Treats</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Sweet Treats &amp; Bakes</h3>
+              </div>
+              <p class="menu-item-desc">Explore golden French toast, chocolate treats and warm bakes.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+                <a href="#sweet-treats" class="menu-explore-link" aria-label="View sweet treats details">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — OUR SIGNATURE PANCAKES
+         Anchor: id="pancakes"
+         ========================================================================== -->
+    <section class="menu-section menu-pancakes-section" id="pancakes">
+      <div class="menu-container">
+        <div class="menu-header">
+          <span class="menu-eyebrow">Signature Stacks</span>
+          <h2 class="menu-title">Stacked with a Little Extra Happiness.</h2>
+          <p class="menu-desc">Soft, fluffy and ready to brighten your day. Discover our pancake-inspired favourites.</p>
+        </div>
+
+        <div class="menu-pancakes-grid">
+          <!-- Item 1: Classic Maple Stack -->
+          <article class="menu-item-card">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/classic-maple.webp" alt="Classic Maple Stack with butter and dripping maple syrup" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Signature</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Classic Maple Stack</h3>
+              </div>
+              <p class="menu-item-desc">Fluffy pancakes served with a classic maple-inspired finish.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Berry Bliss -->
+          <article class="menu-item-card">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/berry-bliss.webp" alt="Berry Bliss pancake stack with fresh seasonal berries" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Signature</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Berry Bliss</h3>
+              </div>
+              <p class="menu-item-desc">A colourful sweet favourite with berries and a lovely fresh finish.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Chocolate Dream -->
+          <article class="menu-item-card">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/chocolate-dream.webp" alt="Chocolate Dream pancakes with chocolate ganache and shavings" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Signature</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Chocolate Dream</h3>
+              </div>
+              <p class="menu-item-desc">A delightful chocolate-inspired pancake treat.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Banana Caramel -->
+          <article class="menu-item-card">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/banana-caramel.webp" alt="Banana Caramel pancakes with caramelized banana slices" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Signature</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Banana Caramel</h3>
+              </div>
+              <p class="menu-item-desc">A sweet combination inspired by banana and caramel flavours.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Honey Butter Stack -->
+          <article class="menu-item-card">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/honey-butter.webp" alt="Honey Butter Stack with melting whipped honey butter" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Signature</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Honey Butter Stack</h3>
+              </div>
+              <p class="menu-item-desc">A comforting pancake favourite with a honey-and-butter-inspired finish.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Cinnamon Apple -->
+          <article class="menu-item-card">
+            <div class="menu-item-image-wrap">
+              <img src="assets/images/menu/cinnamon-apple.webp" alt="Cinnamon Apple pancakes with spiced stewed apples" class="menu-item-img" width="400" height="240" loading="lazy">
+              <span class="menu-item-category-badge">Signature</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-title-row">
+                <h3 class="menu-item-title">Cinnamon Apple</h3>
+              </div>
+              <p class="menu-item-desc">A cosy sweet choice inspired by apple and cinnamon.</p>
+              <div class="menu-item-footer">
+                <span class="menu-price-tag">Price to be confirmed</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — BEYOND THE PANCAKES (4 Category Feature Panels)
+         Anchor: id="waffles"
+         Sub-anchors: id="breakfast-plates", id="eggs-toast", id="bowls-light-bites"
+         ========================================================================== -->
+    <section class="menu-section menu-beyond-section" id="waffles">
+      <div class="menu-container">
+        <div class="menu-header">
+          <span class="menu-eyebrow">Morning Favourites</span>
+          <h2 class="menu-title">More Lovely Ways to Start Your Day.</h2>
+          <p class="menu-desc">Explore more comforting choices, from golden waffles to savoury breakfast plates and light bites.</p>
+        </div>
+
+        <div class="menu-beyond-grid">
+          <!-- Category 1: Golden Waffles -->
+          <article class="menu-beyond-card">
+            <div class="menu-beyond-image-wrap">
+              <img src="assets/images/menu/golden-waffles.webp" alt="Golden Waffles with Belgian malted batter and strawberries" class="menu-beyond-img" width="400" height="300" loading="lazy">
+            </div>
+            <div class="menu-beyond-body">
+              <h3 class="menu-beyond-card-title">Golden Waffles</h3>
+              <p class="menu-beyond-card-desc">Discover golden waffle favourites and sweet breakfast combinations.</p>
+              <div class="menu-beyond-card-action">
+                <span class="menu-price-tag" style="margin-bottom: 0.85rem;">Price to be confirmed</span>
+                <div>
+                  <a href="#menu-collection" class="btn-pb btn-pb-secondary" style="font-size: 0.8125rem; padding: 0.5rem 1rem;">
+                    <span>Explore Waffles</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Category 2: Hearty Breakfast Plates -->
+          <article class="menu-beyond-card" id="breakfast-plates">
+            <div class="menu-beyond-image-wrap">
+              <img src="assets/images/menu/hearty-plates.webp" alt="Hearty breakfast plate with eggs, sausage, and toasted bread" class="menu-beyond-img" width="400" height="300" loading="lazy">
+            </div>
+            <div class="menu-beyond-body">
+              <h3 class="menu-beyond-card-title">Hearty Breakfast Plates</h3>
+              <p class="menu-beyond-card-desc">Enjoy satisfying breakfast-inspired plates for a slower morning.</p>
+              <div class="menu-beyond-card-action">
+                <span class="menu-price-tag" style="margin-bottom: 0.85rem;">Price to be confirmed</span>
+                <div>
+                  <a href="#menu-collection" class="btn-pb btn-pb-secondary" style="font-size: 0.8125rem; padding: 0.5rem 1rem;">
+                    <span>Explore Plates</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Category 3: Eggs & Toast -->
+          <article class="menu-beyond-card" id="eggs-toast">
+            <div class="menu-beyond-image-wrap">
+              <img src="assets/images/menu/eggs-toast.webp" alt="Poached eggs with sliced avocado and toasted sourdough bread" class="menu-beyond-img" width="400" height="300" loading="lazy">
+            </div>
+            <div class="menu-beyond-body">
+              <h3 class="menu-beyond-card-title">Eggs &amp; Toast</h3>
+              <p class="menu-beyond-card-desc">Explore familiar breakfast combinations with eggs and toast.</p>
+              <div class="menu-beyond-card-action">
+                <span class="menu-price-tag" style="margin-bottom: 0.85rem;">Price to be confirmed</span>
+                <div>
+                  <a href="#menu-collection" class="btn-pb btn-pb-secondary" style="font-size: 0.8125rem; padding: 0.5rem 1rem;">
+                    <span>Explore Eggs &amp; Toast</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Category 4: Bowls & Light Bites -->
+          <article class="menu-beyond-card" id="bowls-light-bites">
+            <div class="menu-beyond-image-wrap">
+              <img src="assets/images/menu/light-bowls.webp" alt="Light breakfast yogurt bowl with fresh berries and granola" class="menu-beyond-img" width="400" height="300" loading="lazy">
+            </div>
+            <div class="menu-beyond-body">
+              <h3 class="menu-beyond-card-title">Bowls &amp; Light Bites</h3>
+              <p class="menu-beyond-card-desc">Find lighter breakfast-inspired choices for a refreshing start.</p>
+              <div class="menu-beyond-card-action">
+                <span class="menu-price-tag" style="margin-bottom: 0.85rem;">Price to be confirmed</span>
+                <div>
+                  <a href="#menu-collection" class="btn-pb btn-pb-secondary" style="font-size: 0.8125rem; padding: 0.5rem 1rem;">
+                    <span>Explore Bowls</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5 — COFFEE, DRINKS & SWEET LITTLE EXTRAS
+         Anchors: id="coffee-drinks", id="sweet-treats"
+         ========================================================================== -->
+    <section class="menu-section menu-drinks-sweets-section">
+      <div class="menu-container">
+        <div class="menu-header">
+          <span class="menu-eyebrow">Sip &amp; Savour</span>
+          <h2 class="menu-title">Every Good Breakfast Deserves a Little Something Extra.</h2>
+          <p class="menu-desc">Complete your morning with comforting drinks and sweet little treats.</p>
+        </div>
+
+        <div class="menu-split-col-grid">
+          <!-- Left Column: Coffee & Drinks -->
+          <div class="menu-split-card" id="coffee-drinks">
+            <div class="menu-split-img-wrap">
+              <img src="assets/images/menu/coffee-drinks.webp" alt="Barista pouring delicate latte art in a ceramic cup" class="menu-split-img" width="600" height="250" loading="lazy">
+            </div>
+            <div class="menu-split-header">
+              <h3 class="menu-split-title">Coffee &amp; Drinks</h3>
+              <p class="menu-split-desc">Handcrafted hot brews, soothing herbal teas and refreshing morning juices.</p>
+            </div>
+
+            <div class="menu-items-list">
+              <!-- Item 1: Coffee -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Coffee</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Freshly brewed house morning blend with balanced, smooth notes.</p>
+              </div>
+
+              <!-- Item 2: Cappuccino -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Cappuccino</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Rich espresso topped with velvety steamed milk foam and cocoa dusting.</p>
+              </div>
+
+              <!-- Item 3: Latte -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Latte</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Smooth espresso blended with silky steamed milk.</p>
+              </div>
+
+              <!-- Item 4: Tea -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Tea</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Selected warming morning teas served fresh by the pot.</p>
+              </div>
+
+              <!-- Item 5: Hot Chocolate -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Hot Chocolate</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Comforting warm chocolate drink topped with soft cream.</p>
+              </div>
+
+              <!-- Item 6: Orange Juice -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Orange Juice</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Chilled freshly pressed citrus juice to brighten your morning.</p>
+              </div>
+
+              <!-- Item 7: Seasonal Fruit Drink -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Seasonal Fruit Drink</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Refreshing house-crafted morning fruit blend.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Sweet Treats -->
+          <div class="menu-split-card" id="sweet-treats">
+            <div class="menu-split-img-wrap">
+              <img src="assets/images/menu/sweet-treats.webp" alt="Elegantly presented brioche French toast with berries and cream" class="menu-split-img" width="600" height="250" loading="lazy">
+            </div>
+            <div class="menu-split-header">
+              <h3 class="menu-split-title">Sweet Treats</h3>
+              <p class="menu-split-desc">Comforting morning confections, golden toasts and lovely sweet additions.</p>
+            </div>
+
+            <div class="menu-items-list">
+              <!-- Item 1: French Toast -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">French Toast</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Golden pan-crisped brioche dusted with gentle sweetness.</p>
+              </div>
+
+              <!-- Item 2: Chocolate-inspired Treat -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Chocolate-inspired Treat</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">A rich and delightful morning chocolate baked specialty.</p>
+              </div>
+
+              <!-- Item 3: Fruit & Sweet Combination -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Fruit &amp; Sweet Combination</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Seasonal berries and tender fruit paired with delicate cream.</p>
+              </div>
+
+              <!-- Item 4: Honey Butter Toast -->
+              <div class="menu-list-row">
+                <div class="menu-list-top">
+                  <h4 class="menu-list-name">Honey Butter Toast</h4>
+                  <span class="menu-price-tag">Price to be confirmed</span>
+                </div>
+                <p class="menu-list-desc">Crisp toasted brioche finished with whipped warm honey butter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6 — A LITTLE NOTE & FINAL MENU CTA
+         Heading: "GOOD FOOD STARTS WITH GOOD CHOICES."
+         ========================================================================== -->
+    <section class="menu-section menu-note-cta-section" id="menu-note-cta">
+      <div class="menu-container">
+        <div class="menu-header">
+          <span class="menu-eyebrow">Our Promise</span>
+          <h2 class="menu-title">Good Food Starts with Good Choices.</h2>
+        </div>
+
+        <div class="menu-note-grid">
+          <!-- Left: Fresh Ingredients Culinary Photo -->
+          <div class="menu-note-visual">
+            <img src="assets/images/menu/menu-fresh-details.webp" alt="Fresh breakfast ingredients carefully arranged on rustic kitchen counter" class="menu-note-img" width="560" height="480" loading="lazy">
+          </div>
+
+          <!-- Right: Note from Kitchen & Final CTA -->
+          <div class="menu-note-content">
+            <span class="menu-eyebrow" style="margin-bottom: 0.85rem;">A Note from Our Kitchen</span>
+            <h3>Freshly Prepared. Lovely to Enjoy.</h3>
+            <p>
+              We want every visit to feel special. Menu items, availability and ingredients may vary. If you have questions about ingredients or allergens, please speak with our team before ordering.
+            </p>
+
+            <!-- Allergen Notice Information Box -->
+            <div class="menu-allergen-box" role="note">
+              <svg class="menu-allergen-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="menu-allergen-text">
+                Please ask our team about current availability, ingredients and allergen information.
+              </p>
+            </div>
+
+            <!-- Final Menu CTA Area -->
+            <div class="menu-final-cta-block">
+              <h4>Found Something You Love?</h4>
+              <p>Bring your appetite, gather your favourite people and enjoy a lovely morning with us.</p>
+              <div class="menu-final-cta-btns">
+                <a href="group-bookings.html" class="btn-pb btn-pb-primary">
+                  <span>Plan a Group Visit</span>
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="contact.html" class="btn-pb btn-pb-secondary">
+                  <span>Get in Touch</span>
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Strictly identical across all 6 pages)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" aria-label="Pancake &amp; Breakfast House Home">
+          <img src="assets/images/brand/logo-white.svg" alt="Pancake &amp; Breakfast House" width="220" height="49">
+        </a>
+        <div class="footer-brand-tagline">Good Morning. Good Food. Good Moments.</div>
+        <p class="footer-brand-desc">
+          A welcoming place for fluffy pancakes, comforting breakfast favourites and lovely mornings together.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="footer-social-links" aria-label="Social Media Links">
+          <a href="#" class="social-icon-btn" aria-label="Instagram">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="Facebook">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="TikTok">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-links-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="group-bookings.html">Group Bookings</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Our Menu -->
+      <div class="footer-links-col">
+        <h3>Our Menu</h3>
+        <ul class="footer-links-list">
+          <li><a href="menu.html#pancakes">Pancakes</a></li>
+          <li><a href="menu.html#waffles">Waffles</a></li>
+          <li><a href="menu.html#breakfast-plates">Breakfast Plates</a></li>
+          <li><a href="menu.html#eggs-toast">Eggs &amp; Toast</a></li>
+          <li><a href="menu.html#coffee-drinks">Coffee &amp; Drinks</a></li>
+          <li><a href="menu.html#sweet-treats">Sweet Treats</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Plan Your Visit -->
+      <div class="footer-links-col">
+        <h3>Plan Your Visit</h3>
+        <ul class="footer-links-list">
+          <li><a href="group-bookings.html#booking">Book a Table</a></li>
+          <li><a href="group-bookings.html">Group Gatherings</a></li>
+          <li><a href="about.html#our-story">Our Story</a></li>
+          <li><a href="about.html#our-restaurant">Our Restaurant</a></li>
+          <li><a href="about.html#food-philosophy">Food Philosophy</a></li>
+          <li><a href="about.html#gallery">Photo Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Get in Touch & Newsletter -->
+      <div class="footer-contact-col">
+        <h3>Get in Touch</h3>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <span>124 Morning Light Way, Maplewood Quarter</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          <span>(555) 234-7890</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span>hello@pancakehouse-example.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>Mon – Sun: 7:00 AM – 3:00 PM</span>
+        </div>
+
+        <!-- Newsletter Subscription Form -->
+        <div style="margin-top: 1.5rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #FFF4E6;">Morning Newsletter</h4>
+          <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" aria-label="Email address for newsletter" required>
+              <button type="submit">Subscribe</button>
+            </div>
+            <p class="newsletter-privacy">We respect your privacy. No spam, ever.</p>
+            <div class="newsletter-message" id="newsletterMsg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div>&copy; 2026 Pancake &amp; Breakfast House. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms &amp; Conditions</a>
+        <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Local Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,778 @@
+/* ==========================================================================
+   PANCAKE & BREAKFAST HOUSE — ABOUT STYLESHEET (about.css)
+   Concept: The Story Behind Every Good Morning
+   6 Unique Editorial & Storytelling Sections
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared Section Framework for About Page
+   -------------------------------------------------------------------------- */
+.about-section {
+  padding: 6rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 4.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-section {
+    padding: 3.75rem 1rem;
+  }
+}
+
+.about-container {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.about-header {
+  text-align: center;
+  max-width: 780px;
+  margin-inline: auto;
+  margin-bottom: 3.75rem;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(166, 94, 50, 0.08);
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+html[data-theme="dark"] .about-eyebrow {
+  background: rgba(227, 160, 109, 0.15);
+  color: var(--color-primary);
+}
+
+.about-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  color: var(--color-text-main);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-desc {
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   SECTION 1: UNIQUE ABOUT HERO
+   Documentary-style morning preparation
+   ========================================================================== */
+.about-hero {
+  background: linear-gradient(180deg, rgba(255, 249, 239, 0.95) 0%, rgba(244, 215, 198, 0.35) 100%);
+  padding: 5.5rem 1.5rem 6.5rem 1.5rem;
+  position: relative;
+}
+
+html[data-theme="dark"] .about-hero {
+  background: linear-gradient(180deg, #211A17 0%, #2A1F1A 100%);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.about-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+[dir="rtl"] .about-hero-content {
+  align-items: flex-start;
+  text-align: right;
+}
+
+.about-hero-title {
+  font-size: clamp(2.75rem, 5.2vw, 4.4rem);
+  color: var(--color-text-main);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+[dir="rtl"] .about-hero-title {
+  text-align: right;
+}
+
+.about-hero-desc {
+  font-size: clamp(1.1rem, 1.35vw, 1.25rem);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+  text-align: left;
+}
+
+[dir="rtl"] .about-hero-desc {
+  text-align: right;
+}
+
+.about-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.about-hero-image-wrap {
+  position: relative;
+}
+
+.about-hero-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+.about-hero-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 24px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.35rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 3;
+}
+
+[dir="rtl"] .about-hero-badge {
+  left: auto;
+  right: 24px;
+}
+
+.about-hero-badge-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(166, 94, 50, 0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-hero-badge-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+}
+
+.about-hero-badge-sub {
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .about-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .about-hero-title, .about-hero-desc {
+    text-align: center;
+  }
+  [dir="rtl"] .about-hero-title, [dir="rtl"] .about-hero-desc {
+    text-align: center;
+  }
+  .about-hero-cta {
+    justify-content: center;
+  }
+  .about-hero-img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero-img {
+    height: 300px;
+  }
+  .about-hero-badge {
+    bottom: -15px;
+    left: 12px;
+    right: 12px;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   SECTION 2: OUR STORY (Editorial Split Layout)
+   Anchor: id="our-story"
+   ========================================================================== */
+.about-story-section {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.about-story-visual {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+.about-story-img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-story-img {
+    height: 360px;
+  }
+}
+
+.about-story-content {
+  text-align: left;
+}
+
+[dir="rtl"] .about-story-content {
+  text-align: right;
+}
+
+.about-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-story-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.about-story-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(166, 94, 50, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.about-story-item h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.4rem;
+}
+
+.about-story-item p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.about-quote-box {
+  background-color: var(--color-bg-main);
+  border-left: 4px solid var(--color-primary);
+  padding: 1.25rem 1.75rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+[dir="rtl"] .about-quote-box {
+  border-left: none;
+  border-right: 4px solid var(--color-primary);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.about-quote-text {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   SECTION 3: OUR FOOD PHILOSOPHY (3-Column Visual Cards)
+   Anchor: id="food-philosophy"
+   ========================================================================== */
+.about-philosophy-section {
+  background-color: var(--color-bg-main);
+}
+
+.about-philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+}
+
+@media (max-width: 1024px) {
+  .about-philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-philosophy-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.about-philosophy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-philosophy-img-wrap {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.about-philosophy-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-philosophy-card:hover .about-philosophy-img {
+  transform: scale(1.05);
+}
+
+.about-philosophy-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+[dir="rtl"] .about-philosophy-body {
+  text-align: right;
+}
+
+.about-philosophy-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.75rem;
+}
+
+.about-philosophy-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SECTION 4: OUR RESTAURANT EXPERIENCE (Asymmetric Mosaic)
+   Anchor: id="our-restaurant"
+   ========================================================================== */
+.about-experience-section {
+  background-color: var(--color-bg-card);
+}
+
+.about-experience-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.75rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .about-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.about-experience-mosaic {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-panoramic-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.about-panoramic-img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-experience-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.about-thumb-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.about-thumb-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-mosaic-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(45, 33, 28, 0.82);
+  color: #FFFFFF;
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+[dir="rtl"] .about-mosaic-caption {
+  left: auto;
+  right: 12px;
+}
+
+.about-experience-content {
+  text-align: left;
+}
+
+[dir="rtl"] .about-experience-content {
+  text-align: right;
+}
+
+.about-experience-content h3 {
+  font-size: clamp(1.85rem, 2.7vw, 2.5rem);
+  color: var(--color-text-main);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.about-experience-content p {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   SECTION 5: OUR GALLERY (Editorial Photography Masonry Grid + Lightbox)
+   Anchor: id="gallery"
+   ========================================================================== */
+.about-gallery-section {
+  background-color: var(--color-bg-main);
+}
+
+.about-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .about-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  background-color: var(--color-bg-secondary);
+}
+
+.about-gallery-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-gallery-item:hover .about-gallery-img {
+  transform: scale(1.06);
+}
+
+.about-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(45, 33, 28, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0.9;
+  transition: opacity var(--transition-normal);
+}
+
+.about-gallery-caption {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Accessible Lightbox Modal */
+.about-lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 14, 11, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 1050;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.about-lightbox.active {
+  display: flex;
+}
+
+.about-lightbox-container {
+  max-width: 960px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.about-lightbox-caption {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.about-lightbox-close {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 2.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+[dir="rtl"] .about-lightbox-close {
+  right: auto;
+  left: 0;
+}
+
+.about-lightbox-prev,
+.about-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.about-lightbox-prev:hover,
+.about-lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.about-lightbox-prev {
+  left: -70px;
+}
+
+.about-lightbox-next {
+  right: -70px;
+}
+
+@media (max-width: 1120px) {
+  .about-lightbox-prev {
+    left: 10px;
+  }
+  .about-lightbox-next {
+    right: 10px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 6: OUR WELCOME & FINAL CTA
+   Full-width closing section
+   ========================================================================== */
+.about-closing-section {
+  position: relative;
+  padding: 7.5rem 1.5rem;
+  overflow: hidden;
+  background-color: var(--color-espresso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-closing-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.about-closing-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.38);
+}
+
+.about-closing-card {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  background: rgba(45, 33, 28, 0.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 244, 230, 0.18);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 600px) {
+  .about-closing-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.about-closing-card .about-eyebrow {
+  background: rgba(245, 223, 168, 0.18);
+  color: var(--color-accent);
+}
+
+.about-closing-card .about-title {
+  color: #FFF4E6;
+  margin-bottom: 1.25rem;
+}
+
+.about-closing-card .about-desc {
+  color: rgba(255, 244, 230, 0.88);
+  margin-bottom: 2.25rem;
+}
+
+.about-closing-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}

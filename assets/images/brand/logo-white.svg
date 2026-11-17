@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" width="340" height="76" fill="none">
+  <!-- Morning Sun & Pancake Stack Icon Group -->
+  <g transform="translate(6, 6)">
+    <!-- Soft Morning Sun Arc -->
+    <path d="M12 40 A 24 24 0 0 1 52 40" fill="none" stroke="#F5DFA8" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="2 6"/>
+    <circle cx="32" cy="38" r="19" fill="#FFF2D6" opacity="0.3"/>
+    
+    <!-- Plate base -->
+    <ellipse cx="32" cy="56" rx="28" ry="6.5" fill="#685044"/>
+    <ellipse cx="32" cy="55" rx="25" ry="5.5" fill="#FAF6EE" opacity="0.9"/>
+
+    <!-- Bottom Pancake Layer -->
+    <path d="M12 48 C12 43 18 42 32 42 C46 42 52 43 52 48 C52 52.5 46 54 32 54 C18 54 12 52.5 12 48 Z" fill="#DFA867"/>
+    <ellipse cx="32" cy="46" rx="20" ry="4.5" fill="#F0C688"/>
+
+    <!-- Middle Pancake Layer -->
+    <path d="M13 41 C13 36.5 19 35.5 32 35.5 C45 35.5 51 36.5 51 41 C51 45 45 46.5 32 46.5 C19 46.5 13 45 13 41 Z" fill="#E3A06D"/>
+    <ellipse cx="32" cy="39" rx="19" ry="4.2" fill="#EBB974"/>
+
+    <!-- Top Pancake Layer -->
+    <path d="M14 34 C14 29.5 20 28.5 32 28.5 C44 28.5 50 29.5 50 34 C50 38 44 39.5 32 39.5 C20 39.5 14 38 14 34 Z" fill="#F0B582"/>
+    <ellipse cx="32" cy="32" rx="18" ry="4" fill="#F5CBA0"/>
+
+    <!-- Warm Amber Maple Syrup Flow & Drips -->
+    <path d="M21 32 C23 35 25 36 26 44 C26.6 48 29 48 29.5 44 C30 40 33 34 35 34 C37 34 39 37 40 46 C40.8 50 43.5 50 44 45 C44.8 38 46 34 48 33" 
+          fill="none" stroke="#F5DFA8" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="26" cy="45" rx="1.5" ry="2" fill="#F5DFA8"/>
+    <ellipse cx="40.5" cy="47" rx="1.5" ry="2" fill="#F5DFA8"/>
+
+    <!-- Butter Pat Melting at an Angle -->
+    <polygon points="28,26 36,24 38,28 30,30" fill="#FFF2B2" stroke="#E3B33C" stroke-width="0.8"/>
+    <polygon points="28,26 30,30 30,32 28,28" fill="#F5DFA8"/>
+  </g>
+
+  <!-- Brand Typography in Crisp Warm White -->
+  <g transform="translate(80, 16)">
+    <!-- Main Brand Name -->
+    <text x="0" y="24" font-family="'DM Serif Display', Georgia, serif" font-size="21.5" font-weight="700" fill="#FFF4E6" letter-spacing="1.2">
+      PANCAKE <tspan fill="#E3A06D">&amp;</tspan> BREAKFAST
+    </text>
+    <text x="0" y="44" font-family="'DM Serif Display', Georgia, serif" font-size="16" font-weight="600" fill="#FFF4E6" letter-spacing="2.8">
+      HOUSE
+    </text>
+    
+    <!-- Tagline -->
+    <text x="82" y="43" font-family="'Inter', system-ui, sans-serif" font-size="7.5" font-weight="600" fill="#D1BFAE" letter-spacing="1.8">
+      GOOD MORNING • GOOD FOOD • GOOD MOMENTS
+    </text>
+  </g>
+</svg>

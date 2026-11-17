@@ -1,0 +1,884 @@
+/* ==========================================================================
+   PANCAKE & BREAKFAST HOUSE — MENU STYLESHEET (menu.css)
+   Concept: A Little Something for Every Morning
+   6 Unique Editorial & Functional Sections
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared Section Framework for Menu Page
+   -------------------------------------------------------------------------- */
+.menu-section {
+  padding: 6rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .menu-section {
+    padding: 4.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-section {
+    padding: 3.75rem 1rem;
+  }
+}
+
+.menu-container {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.menu-header {
+  text-align: center;
+  max-width: 780px;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+}
+
+.menu-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(166, 94, 50, 0.08);
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+html[data-theme="dark"] .menu-eyebrow {
+  background: rgba(227, 160, 109, 0.15);
+  color: var(--color-primary);
+}
+
+.menu-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+  color: var(--color-text-main);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.menu-desc {
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Price to be confirmed badge / tag */
+.menu-price-tag {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: rgba(166, 94, 50, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.02em;
+}
+
+html[data-theme="dark"] .menu-price-tag {
+  background-color: rgba(227, 160, 109, 0.15);
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   SECTION 1: UNIQUE MENU HERO
+   Close-up editorial photograph of chef garnishing dish
+   ========================================================================== */
+.menu-hero {
+  background: linear-gradient(180deg, rgba(255, 249, 239, 0.95) 0%, rgba(244, 215, 198, 0.4) 100%);
+  padding: 5.5rem 1.5rem 6.5rem 1.5rem;
+  position: relative;
+}
+
+html[data-theme="dark"] .menu-hero {
+  background: linear-gradient(180deg, #211A17 0%, #2A1F1A 100%);
+}
+
+.menu-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.menu-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+[dir="rtl"] .menu-hero-content {
+  align-items: flex-start;
+  text-align: right;
+}
+
+.menu-hero-title {
+  font-size: clamp(2.75rem, 5.2vw, 4.4rem);
+  color: var(--color-text-main);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+[dir="rtl"] .menu-hero-title {
+  text-align: right;
+}
+
+.menu-hero-desc {
+  font-size: clamp(1.1rem, 1.35vw, 1.25rem);
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+  text-align: left;
+}
+
+[dir="rtl"] .menu-hero-desc {
+  text-align: right;
+}
+
+.menu-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.menu-hero-image-wrap {
+  position: relative;
+}
+
+.menu-hero-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+.menu-hero-floating-badge {
+  position: absolute;
+  bottom: -20px;
+  left: 24px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.35rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 3;
+}
+
+[dir="rtl"] .menu-hero-floating-badge {
+  left: auto;
+  right: 24px;
+}
+
+.menu-hero-badge-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(166, 94, 50, 0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menu-hero-badge-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+}
+
+.menu-hero-badge-sub {
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .menu-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .menu-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .menu-hero-title, .menu-hero-desc {
+    text-align: center;
+  }
+  [dir="rtl"] .menu-hero-title, [dir="rtl"] .menu-hero-desc {
+    text-align: center;
+  }
+  .menu-hero-cta {
+    justify-content: center;
+  }
+  .menu-hero-img {
+    height: 440px;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-hero-img {
+    height: 320px;
+  }
+  .menu-hero-floating-badge {
+    bottom: -15px;
+    left: 12px;
+    right: 12px;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   SECTION 2: EXPLORE OUR MENU CATEGORIES & FILTER HUB
+   ========================================================================== */
+.menu-filter-section {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Category Filter Bar */
+.menu-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.25rem;
+}
+
+.menu-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.menu-filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.menu-filter-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(166, 94, 50, 0.3);
+}
+
+/* Search Box Container */
+.menu-search-wrapper {
+  max-width: 580px;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.menu-search-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-main);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.5rem 0.35rem 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+[dir="rtl"] .menu-search-box {
+  padding: 0.35rem 1.25rem 0.35rem 0.5rem;
+}
+
+.menu-search-box:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(166, 94, 50, 0.15);
+}
+
+.menu-search-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+
+[dir="rtl"] .menu-search-icon {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+.menu-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--color-text-main);
+  font-size: 0.95rem;
+  outline: none;
+  padding: 0.45rem 0;
+}
+
+.menu-search-input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.75;
+}
+
+.menu-search-clear-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  padding: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-search-clear-btn:hover {
+  color: var(--color-primary);
+  background-color: rgba(166, 94, 50, 0.1);
+}
+
+/* Interactive Filter Grid */
+.menu-interactive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .menu-interactive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-interactive-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Interactive Card Item */
+.menu-item-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.menu-item-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+}
+
+.menu-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-item-card:hover .menu-item-img {
+  transform: scale(1.05);
+}
+
+.menu-item-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(45, 33, 28, 0.85);
+  color: #FFFFFF;
+  backdrop-filter: blur(4px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+[dir="rtl"] .menu-item-category-badge {
+  left: auto;
+  right: 14px;
+}
+
+.menu-item-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+[dir="rtl"] .menu-item-body {
+  text-align: right;
+}
+
+.menu-item-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.menu-item-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.menu-item-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.menu-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+/* Empty state message */
+.menu-empty-state {
+  display: none;
+  text-align: center;
+  padding: 4.5rem 1.5rem;
+  background-color: var(--color-bg-card);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.menu-empty-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--color-text-muted);
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  opacity: 0.6;
+}
+
+.menu-empty-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.menu-empty-desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   SECTION 3: OUR SIGNATURE PANCAKES
+   Anchor: id="pancakes"
+   ========================================================================== */
+.menu-pancakes-section {
+  background-color: var(--color-bg-main);
+}
+
+.menu-pancakes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .menu-pancakes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-pancakes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 4: BEYOND THE PANCAKES (4 Category Feature Panels)
+   Anchor: id="waffles"
+   Sub-anchors: #breakfast-plates, #eggs-toast, #bowls-light-bites
+   ========================================================================== */
+.menu-beyond-section {
+  background-color: var(--color-bg-card);
+}
+
+.menu-beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+@media (max-width: 900px) {
+  .menu-beyond-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.menu-beyond-card {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+@media (max-width: 600px) {
+  .menu-beyond-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.menu-beyond-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.menu-beyond-image-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.menu-beyond-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-beyond-card:hover .menu-beyond-img {
+  transform: scale(1.05);
+}
+
+.menu-beyond-body {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+[dir="rtl"] .menu-beyond-body {
+  text-align: right;
+}
+
+.menu-beyond-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.3;
+  margin-bottom: 0.65rem;
+}
+
+.menu-beyond-card-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.menu-beyond-card-action {
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   SECTION 5: COFFEE, DRINKS & SWEET LITTLE EXTRAS
+   Anchors: id="coffee-drinks", id="sweet-treats"
+   ========================================================================== */
+.menu-drinks-sweets-section {
+  background-color: var(--color-bg-main);
+}
+
+.menu-split-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+}
+
+@media (max-width: 1024px) {
+  .menu-split-col-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.menu-split-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 600px) {
+  .menu-split-card {
+    padding: 1.5rem;
+  }
+}
+
+.menu-split-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+[dir="rtl"] .menu-split-header {
+  text-align: right;
+}
+
+.menu-split-img-wrap {
+  width: 100%;
+  height: 250px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+}
+
+.menu-split-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-split-title {
+  font-size: 1.75rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.menu-split-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Item List inside Split Card */
+.menu-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.menu-list-row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.menu-list-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.menu-list-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.menu-list-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.menu-list-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 6: A LITTLE NOTE & FINAL MENU CTA
+   Heading: "GOOD FOOD STARTS WITH GOOD CHOICES."
+   ========================================================================== */
+.menu-note-cta-section {
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+}
+
+.menu-note-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .menu-note-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+}
+
+.menu-note-visual {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+.menu-note-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-note-img {
+    height: 320px;
+  }
+}
+
+.menu-note-content {
+  text-align: left;
+}
+
+[dir="rtl"] .menu-note-content {
+  text-align: right;
+}
+
+.menu-note-content h3 {
+  font-size: clamp(1.85rem, 2.7vw, 2.4rem);
+  color: var(--color-text-main);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.menu-note-content p {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.menu-allergen-box {
+  background: rgba(166, 94, 50, 0.08);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+[dir="rtl"] .menu-allergen-box {
+  border-left: none;
+  border-right: 4px solid var(--color-primary);
+}
+
+.menu-allergen-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.menu-allergen-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-main);
+  font-weight: 600;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Final CTA block within Section 6 */
+.menu-final-cta-block {
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.menu-final-cta-block h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.65rem;
+}
+
+.menu-final-cta-block p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.menu-final-cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
